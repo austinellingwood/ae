@@ -1,5 +1,5 @@
 {
-  "executionRoleArn": null,
+  "executionRoleArn": "arn:aws:iam::767423847625:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -8,7 +8,7 @@
       "portMappings": [],
       "command": null,
       "linuxParameters": null,
-      "cpu": 1,
+      "cpu": 0,
       "environment": [],
       "ulimits": null,
       "dnsServers": null,
@@ -18,7 +18,7 @@
       "memory": 512,
       "memoryReservation": null,
       "volumesFrom": [],
-      "image": "767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:v3",
+      "image": "767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:v2",
       "disableNetworking": null,
       "interactive": null,
       "healthCheck": null,
@@ -32,18 +32,24 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "dev-image-3"
+      "name": "dev-image-2"
     }
   ],
   "placementConstraints": [],
-  "memory": null,
-  "taskRoleArn": null,
+  "memory": "512",
+  "taskRoleArn": "arn:aws:iam::767423847625:role/ecsTaskExecutionRole",
   "compatibilities": [
     "EC2"
   ],
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:767423847625:task-definition/deploy-to-dev:3",
   "family": "deploy-to-dev",
   "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
     {
       "targetId": null,
       "targetType": null,
@@ -61,13 +67,19 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
     }
   ],
   "requiresCompatibilities": [
     "EC2"
   ],
   "networkMode": "awsvpc",
-  "cpu": null,
+  "cpu": "1024",
   "revision": 3,
   "status": "ACTIVE",
   "volumes": []
