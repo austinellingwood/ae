@@ -8,7 +8,7 @@
       "portMappings": [],
       "command": null,
       "linuxParameters": null,
-      "cpu": 0,
+      "cpu": 1,
       "environment": [],
       "ulimits": null,
       "dnsServers": null,
