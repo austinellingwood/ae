@@ -32,7 +32,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "dev-image-2"
+      "name": "dev-image-3"
     }
   ],
   "placementConstraints": [],
@@ -41,7 +41,7 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:767423847625:task-definition/deploy-to-dev:2",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:767423847625:task-definition/deploy-to-dev:3",
   "family": "deploy-to-dev",
   "requiresAttributes": [
     {
@@ -68,7 +68,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": null,
-  "revision": 2,
+  "revision": 3,
   "status": "ACTIVE",
   "volumes": []
 }
