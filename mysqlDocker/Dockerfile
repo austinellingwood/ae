@@ -1,6 +1,6 @@
 ##Dockerfile to make a mysql 5.6 server
 
-FROM 767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo/systemd:latest
+FROM 767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:systemd
 
 ARG MYSQL_SERVER_PACKAGE=mysql-community-server-minimal-5.6.42
 ARG MYSQL_ROOT_PASSWORD=password
