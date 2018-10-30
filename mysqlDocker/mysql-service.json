@@ -14,16 +14,5 @@
             "type": "random"
         }
     ],
-    "networkConfiguration": {
-        "awsvpcConfiguration": {
-            "subnets": [
-                "subnet-b20948da"
-            ],
-            "securityGroups": [
-                "sg-520a2838"
-            ],
-            "assignPublicIp": "ENABLED"
-        }
-    },
     "schedulingStrategy": "REPLICA"
 }
