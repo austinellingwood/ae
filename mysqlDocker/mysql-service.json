@@ -1,5 +1,5 @@
 {
-    "cluster": "mysql",
+    "cluster": "staging-1",
     "serviceName": "mysql-service",
     "taskDefinition": "mysql-task",
     "desiredCount": 1,
