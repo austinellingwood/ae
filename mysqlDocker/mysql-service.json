@@ -1,0 +1,47 @@
+{
+    "cluster": "mysql",
+    "serviceName": "mysql-service",
+    "taskDefinition": "mysql-task",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "",
+            "loadBalancerName": "",
+            "containerName": "",
+            "containerPort": 0
+        }
+    ],
+    "desiredCount": 1,
+    "clientToken": "",
+    "launchType": "EC2",
+    "platformVersion": "",
+    "role": "",
+    "deploymentConfiguration": {
+        "maximumPercent": 0,
+        "minimumHealthyPercent": 0
+    },
+    "placementConstraints": [
+        {
+            "type": "memberOf",
+            "expression": ""
+        }
+    ],
+    "placementStrategy": [
+        {
+            "type": "spread",
+            "field": ""
+        }
+    ],
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                ""
+            ],
+            "securityGroups": [
+                ""
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    },
+    "healthCheckGracePeriodSeconds": 300,
+    "schedulingStrategy": "REPLICA"
+}
