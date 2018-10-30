@@ -1,6 +1,6 @@
 ##Dockerfile to make a mysql 5.6 server
 
-FROM 767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:systemd
+FROM oraclelinux:7-slim
 
 ARG MYSQL_SERVER_PACKAGE=mysql-community-server-minimal-5.6.42
 ARG MYSQL_ROOT_PASSWORD=password
@@ -29,8 +29,7 @@ COPY healthcheck.sh ./healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
-
-RUN service mysqld start
+RUN mysqld
 
 RUN mysql -u root -e "CREATE DATABASE ${MYSQL_DATABASE}"
 RUN mysql -u root stage < /tmp/stage.sql
