@@ -5,7 +5,6 @@
     "desiredCount": 1,
     "clientToken": "",
     "launchType": "EC2",
-    "platformVersion": "null",
     "deploymentConfiguration": {
         "maximumPercent": 200,
         "minimumHealthyPercent": 100
