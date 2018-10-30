@@ -14,7 +14,7 @@
         {
             "registryArn": "",
             "port": 0,
-            "containerName": "",
+            "containerName": "mysqlDocker",
             "containerPort": 0
         }
     ],
