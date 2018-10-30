@@ -11,8 +11,7 @@
     },
     "placementStrategy": [
         {
-            "type": "random",
-            "field": ""
+            "type": "random"
         }
     ],
     "networkConfiguration": {
