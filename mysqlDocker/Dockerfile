@@ -1,6 +1,6 @@
 ##Dockerfile to make a mysql 5.6 server
 
-FROM oraclelinux:7-slim
+FROM systemd:latest
 
 ARG MYSQL_SERVER_PACKAGE=mysql-community-server-minimal-5.6.42
 ARG MYSQL_ROOT_PASSWORD=password
@@ -29,7 +29,7 @@ COPY healthcheck.sh ./healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
-RUN yum install systemd -y
+
 RUN service mysqld start
 
 RUN mysql -u root -e "CREATE DATABASE ${MYSQL_DATABASE}"
