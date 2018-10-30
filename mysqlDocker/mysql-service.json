@@ -2,37 +2,14 @@
     "cluster": "mysql",
     "serviceName": "mysql-service",
     "taskDefinition": "mysql-task",
-    "loadBalancers": [
-        {
-            "targetGroupArn": "",
-            "loadBalancerName": "",
-            "containerName": "",
-            "containerPort": 0
-        }
-    ],
-    "serviceRegistries": [
-        {
-            "registryArn": "",
-            "port": 0,
-            "containerName": "mysqlDocker",
-            "containerPort": 0
-        }
-    ],
     "desiredCount": 1,
     "clientToken": "",
     "launchType": "EC2",
     "platformVersion": "1.20.3",
-    "role": "",
     "deploymentConfiguration": {
-        "maximumPercent": 0,
-        "minimumHealthyPercent": 0
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 100
     },
-    "placementConstraints": [
-        {
-            "type": "memberOf",
-            "expression": ""
-        }
-    ],
     "placementStrategy": [
         {
             "type": "spread",
