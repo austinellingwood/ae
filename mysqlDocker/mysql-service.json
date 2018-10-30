@@ -53,5 +53,3 @@
     "healthCheckGracePeriodSeconds": 300,
     "schedulingStrategy": "REPLICA"
 }
-}
-
