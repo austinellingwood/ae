@@ -22,6 +22,7 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 
 #make directories in server
 VOLUME /var/lib/mysql
+RUN chmod 755 /var/lib/mysql
 
 COPY docker-entrypoint.sh ./entrypoint.sh
 COPY healthcheck.sh ./healthcheck.sh
