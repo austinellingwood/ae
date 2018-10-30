@@ -3,12 +3,12 @@
     "networkMode": "host",
     "containerDefinitions": [
     {
-      "name": "mysql",
+      "name": "mysql-task",
       "image": "767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:mysql",
       "cpu": 512,
       "memory": 512,
       "essential": true
     }
   ],
-  "family": "mysql"
+  "family": "mysql-task"
 }
