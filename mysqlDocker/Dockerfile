@@ -29,7 +29,7 @@ COPY healthcheck.sh ./healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
-CMD ["mysqld"]
+RUN service mysqld start
 
 RUN mysql -u root -e "CREATE DATABASE ${MYSQL_DATABASE}"
 RUN mysql -u root stage < /tmp/stage.sql
