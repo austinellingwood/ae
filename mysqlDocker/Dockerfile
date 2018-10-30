@@ -29,6 +29,7 @@ COPY healthcheck.sh ./healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
+RUN yum install systemd -y
 RUN service mysqld start
 
 RUN mysql -u root -e "CREATE DATABASE ${MYSQL_DATABASE}"
