@@ -3,10 +3,10 @@
 FROM oraclelinux:7-slim
 
 ARG MYSQL_SERVER_PACKAGE=mysql-community-server-minimal-5.6.42
-ARG MYSQL_ROOT_PASSWORD=password
-ARG MYSQL_USER=iuhealth-user
-ARG MYSQL_PASSWORD=password
-ARG MYSQL_DATABASE=stage
+#ARG MYSQL_ROOT_PASSWORD=password
+#ARG MYSQL_USER=iuhealth-user
+#ARG MYSQL_PASSWORD=password
+#ARG MYSQL_DATABASE=stage
 
 
 # Install server
