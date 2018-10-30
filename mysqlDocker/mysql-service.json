@@ -11,7 +11,7 @@
     },
     "placementStrategy": [
         {
-            "type": "spread",
+            "type": "random",
             "field": ""
         }
     ],
