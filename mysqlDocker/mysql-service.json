@@ -10,7 +10,6 @@
             "containerPort": 0
         }
     ],
-<<<<<<< HEAD
     "serviceRegistries": [
         {
             "registryArn": "",
@@ -19,8 +18,6 @@
             "containerPort": 0
         }
     ],
-=======
->>>>>>> ffeafdda758f7fafd50bf2b8c33f6ceaa4b69872
     "desiredCount": 1,
     "clientToken": "",
     "launchType": "EC2",
@@ -55,8 +52,6 @@
     },
     "healthCheckGracePeriodSeconds": 300,
     "schedulingStrategy": "REPLICA"
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> ffeafdda758f7fafd50bf2b8c33f6ceaa4b69872
+
