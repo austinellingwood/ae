@@ -132,9 +132,9 @@ EOF
 
 		if [ "$MYSQL_DATABASE" ]; then
 			echo "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE\` ;" | "${mysql[@]}"
-			mysql+=( "CREATE DATABASE '$MYSQL_DATABASE'" )
-			mysql+=( "USE '$MYSQL_DATABASE'" )
-			mysql+=( "source '$MYSQL_DATABASE_PATH'") 
+			mysql+=( "CREATE DATABASE \'$MYSQL_DATABASE\'" )
+			mysql+=( "USE \'$MYSQL_DATABASE\'" )
+			mysql+=( "source \'$MYSQL_DATABASE_PATH\'") 
 		fi
 
 		if [ "$MYSQL_USER" -a "$MYSQL_PASSWORD" ]; then
