@@ -29,10 +29,9 @@ RUN chmod 777 /var/lib/mysql
 #COPY /stage.sql /tmp/stage.sql
 
 #RUN mount | grep noexec
-
+COPY /stage.sql /tmp/stage.sql
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
-COPY init_db.sh /init_db.sh
 RUN chmod 777 /entrypoint.sh
 RUN chmod 777 /healthcheck.sh
 RUN ls -al
@@ -44,7 +43,6 @@ HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
 CMD ["mysqld"]
 
-RUN /init_db.sh
 
 
 ###########################################################################################
