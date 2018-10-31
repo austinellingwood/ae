@@ -26,6 +26,8 @@ VOLUME /var/lib/mysql
 RUN chmod 777 /var/lib/mysql
 #COPY /stage.sql /tmp/stage.sql
 
+RUN mount | grep noexec
+
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod 777 /entrypoint.sh
