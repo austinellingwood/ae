@@ -27,8 +27,9 @@ VOLUME /var/lib/mysql
 RUN chmod 777 /var/lib/mysql
 #COPY /stage.sql /tmp/stage.sql
 
-RUN mount -o remount,exec /tmp
-RUN mount -o remount,exec /var
+RUN mount -o remount,exec /dev/pts
+RUN mount -o remount,exec /dev/shm
+RUN mount -o remount,exec /sys
 
 #RUN mount | grep noexec
 
