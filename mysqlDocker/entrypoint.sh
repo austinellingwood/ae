@@ -135,7 +135,7 @@ EOF
 			echo "USE "$MYSQL_DATABASE";" | "${mysql[@]}"
 			echo "GRANT ALL ON "$MYSQL_DATABASE".* TO 'root'@'%';" | "${mysql[@]}"
 			echo "show databases;" | "${mysql[@]}"
-			#echo ""$MYSQL_DATABASE" \'<\' "$MYSQL_DATABASE_PATH";" | "${mysql[@]}" 
+			#echo "source "$MYSQL_DATABASE_PATH";" | "${mysql[@]}" 
 		fi
 
 		if [ "$MYSQL_USER" -a "$MYSQL_PASSWORD" ]; then
