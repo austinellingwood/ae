@@ -18,6 +18,7 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
       $MYSQL_SERVER_PACKAGE \
       $MYSQL_SHELL_PACKAGE \
       libpwquality \
+      cifs-utils \
   && yum clean all \
   && mkdir /docker-entrypoint-initdb.d
 
