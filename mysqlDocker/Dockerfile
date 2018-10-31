@@ -22,7 +22,8 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 
 #make directories in server
 VOLUME /var/lib/mysql
-VOLUME /etc/mysql
+RUN chmod 755 /var/lib/mysql
+#COPY /stage.sql /tmp/stage.sql
 
 COPY docker-entrypoint.sh ./entrypoint.sh
 COPY healthcheck.sh ./healthcheck.sh
@@ -31,7 +32,5 @@ HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
 CMD ["mysqld"]
 
-RUN mysql -u root -e "CREATE DATABASE ${MYSQL_DATABASE}"
-RUN mysql -u root stage < /tmp/stage.sql
 
 ###########################################################################################
