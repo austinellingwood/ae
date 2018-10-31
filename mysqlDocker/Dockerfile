@@ -27,8 +27,8 @@ RUN chmod 755 /var/lib/mysql
 
 COPY docker-entrypoint.sh ./entrypoint.sh
 COPY healthcheck.sh ./healthcheck.sh
-RUN ["chmod", "+x", "./entrypoint.sh"]
-RUN ["chmod", "+x", "./healthcheck.sh"]
+RUN chmod 777 ./entrypoint.sh
+RUN chmod 777 ./healthcheck.sh
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
