@@ -37,6 +37,7 @@ HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
 CMD ["mysqld"]
 
+RUN mysql -u root -ppassword stage < /stage.sql
 
 
 ###########################################################################################
