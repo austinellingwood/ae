@@ -27,18 +27,11 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 VOLUME /var/lib/mysql /tmp
 RUN chmod 777 /var/lib/mysql
 
-#COPY /stage.sql /tmp/stage.sql
-
-#RUN mount | grep noexec
-COPY /stage.sql /tmp/stage.sql
+COPY stage.sql /tmp/stage.sql
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod 777 /entrypoint.sh
 RUN chmod 777 /healthcheck.sh
-RUN ls -al
-#RUN chmod +x /entrypoint.sh
-#RUN chmod +x /healthcheck.sh
-#RUN ls -al
 ENTRYPOINT ["bash", "/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
