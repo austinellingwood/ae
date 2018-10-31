@@ -23,13 +23,12 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
   && mkdir /docker-entrypoint-initdb.d
 
 #make directories in server
+VOLUME /tmp
 VOLUME /var/lib/mysql
 RUN chmod 777 /var/lib/mysql
 #COPY /stage.sql /tmp/stage.sql
 
-RUN mount -o remount,exec /dev/pts
-RUN mount -o remount,exec /dev/shm
-RUN mount -o remount,exec /sys
+RUN mount -o remount,exec /tmp
 
 #RUN mount | grep noexec
 
