@@ -26,8 +26,10 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 #make directories in server
 VOLUME /var/lib/mysql /tmp
 RUN chmod 777 /var/lib/mysql
+RUN ls -al /tmp
 
 COPY stage.sql /tmp/stage.sql
+RUN ls -al /tmp
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod 777 /entrypoint.sh
