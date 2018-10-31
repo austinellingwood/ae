@@ -30,6 +30,7 @@ RUN ls -al /tmp
 
 COPY stage.sql /tmp/stage.sql
 RUN ls -al /tmp
+RUN find / -name "*.sql"
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod 777 /entrypoint.sh
