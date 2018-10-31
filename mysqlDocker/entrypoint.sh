@@ -132,11 +132,10 @@ EOF
 
 		if [ "$MYSQL_DATABASE" ]; then
 			echo "CREATE DATABASE IF NOT EXISTS "$MYSQL_DATABASE";" | "${mysql[@]}"
-			echo "USE "$MYSQL_DATABASE";" | "${mysql[@]}"
 			echo "GRANT ALL ON "$MYSQL_DATABASE".* TO 'root'@'%';" | "${mysql[@]}"
 			echo "show databases;" | "${mysql[@]}"
 			echo "SELECT DATABASE();" | "${mysql[@]}"
-			echo "USE "$MYSQL_DATABASE"" | "${mysql[@]}"
+			echo "USE "$MYSQL_DATABASE";" | "${mysql[@]}"
 			echo "SELECT DATABASE();" | "${mysql[@]}"
 			echo "source "$MYSQL_DATABASE_PATH";" | "${mysql[@]}" 
 		fi
