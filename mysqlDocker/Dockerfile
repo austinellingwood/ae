@@ -22,6 +22,7 @@ RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rp
 
 #make directories in server
 VOLUME /var/lib/mysql
+USER root
 RUN chmod 755 /var/lib/mysql
 #COPY /stage.sql /tmp/stage.sql
 
