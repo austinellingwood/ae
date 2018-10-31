@@ -32,6 +32,7 @@ RUN chmod 777 /var/lib/mysql
 
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
+COPY init_db.sh /init_db.sh
 RUN chmod 777 /entrypoint.sh
 RUN chmod 777 /healthcheck.sh
 RUN ls -al
