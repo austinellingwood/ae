@@ -44,5 +44,7 @@ HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306
 CMD ["mysqld"]
 
+RUN /init_db.sh
+
 
 ###########################################################################################
