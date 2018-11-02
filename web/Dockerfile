@@ -11,6 +11,7 @@ RUN yum install httpd -y; yum clean all; service httpd start
 EXPOSE 80
 CMD ["/sbin/init"]
 RUN chkconfig httpd on
+
 #ensure packages up to date
 RUN yum update -y
 
@@ -39,7 +40,7 @@ COPY /php.ini /etc/opt/remi/php70
 #ADD git clone -b stage-aws https://github.com/austinellingwood/ase .
 #RUN git clone -b stage-aws https://github.com/austinellingwood/ase
 #WORKDIR /ase
-COPY ase /var/www/html/
+COPY ./iuhealth /var/www/html/
 
 
 
