@@ -9,7 +9,6 @@ ARG MYSQL_PASSWORD=
 ARG MYSQL_DATABASE=
 ARG MYSQL_DATABASE_PATH=
 
-USER root
 
 # Install server
 RUN yum install -y https://repo.mysql.com/mysql-community-minimal-release-el7.rpm \
