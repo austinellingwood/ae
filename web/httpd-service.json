@@ -1,0 +1,18 @@
+{
+    "cluster": "staging-1",
+    "serviceName": "httpd-service",
+    "taskDefinition": "httpd-task",
+    "desiredCount": 1,
+    "clientToken": "",
+    "launchType": "EC2",
+    "deploymentConfiguration": {
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 100
+    },
+    "placementStrategy": [
+        {
+            "type": "random"
+        }
+    ],
+    "schedulingStrategy": "REPLICA"
+}
