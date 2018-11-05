@@ -41,6 +41,7 @@ COPY /php.ini /etc/opt/remi/php70
 #RUN git clone -b stage-aws https://github.com/austinellingwood/ase
 #WORKDIR /ase
 COPY ./iuhealth /var/www/html/
+COPY ./dbinfo.inc /var/www/inc/
 
 
 
