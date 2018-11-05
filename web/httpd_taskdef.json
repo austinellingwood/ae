@@ -1,0 +1,15 @@
+
+{
+    "executionRoleArn": "arn:aws:iam::767423847625:role/ecsTaskExecutionRole",
+    "networkMode": "host",
+    "containerDefinitions": [
+    {
+      "name": "httpd1",
+      "image": "767423847625.dkr.ecr.us-east-2.amazonaws.com/golf-repo:httpd",
+      "cpu": 512,
+      "memory": 512,
+      "essential": true
+    }
+  ],
+  "family": "httpd-task"
+}
