@@ -30,6 +30,7 @@ RUN chmod 777 /var/lib/mysql
 COPY stage.sql /var/lib/mysql/stage.sql
 COPY entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
+COPY my.cnf /etc/my.cnf
 RUN chmod 777 /entrypoint.sh
 RUN chmod 777 /healthcheck.sh
 ENTRYPOINT ["bash", "/entrypoint.sh"]
