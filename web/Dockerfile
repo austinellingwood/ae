@@ -35,12 +35,5 @@ RUN yum install php70-php php70-php-mysqlnd php70-php-pdo php70-php-gd php70-php
 
 COPY /php.ini /etc/opt/remi/php70
 
-##Adding files into craft
-#COPY ./iuhealth /var/www/html/
-#COPY ./sample.php /var/www/html/
-#COPY ./dbinfo.inc /var/www/inc/
-
-
-
 
 ##############################################################################################################################################################
