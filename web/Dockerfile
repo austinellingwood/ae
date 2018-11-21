@@ -25,8 +25,7 @@ RUN chmod 2775 /var/www
 RUN find /var/www -type d -exec chmod 2775 {} +
 RUN find /var/www -type f -exec chmod 0664 {} +
 
-# Install apache and write hello world message
-RUN echo 'Hello World! This is the third-ish build iteration of the docker testing.' > /var/www/html/index.html
+# Install apache and write files
 
 RUN yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm -y
 RUN yum install http://rpms.remirepo.net/enterprise/remi-release-6.rpm -y
@@ -37,12 +36,9 @@ RUN yum install php70-php php70-php-mysqlnd php70-php-pdo php70-php-gd php70-php
 COPY /php.ini /etc/opt/remi/php70
 
 ##Adding files into craft
-#ADD git clone -b stage-aws https://github.com/austinellingwood/ase .
-#RUN git clone -b stage-aws https://github.com/austinellingwood/ase
-#WORKDIR /ase
-COPY ./iuhealth /var/www/html/
-COPY ./sample.php /var/www/html/
-COPY ./dbinfo.inc /var/www/inc/
+#COPY ./iuhealth /var/www/html/
+#COPY ./sample.php /var/www/html/
+#COPY ./dbinfo.inc /var/www/inc/
 
 
 
